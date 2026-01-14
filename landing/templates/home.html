@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Miguel</title>
+    <link rel="icon" href="{% static 'img/favicon.ico' %}">
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+
+<body>
+    {% include 'header.html' %}
+    <div class="container">
+        <div class="wrapper">
+            <div class="card">
+            </div>
+            <div>
+                <h2>The Future of building happens together.</h2>
+                <h3>Together, we build what’s next.</h3>
+            </div>
+            <div class="card" id="landing-card">
+                <img src="{% static 'img/logo.png' %}" alt="img">
+            </div>
+        </div>
+        <div>
+            <button type="button" id="scrollBtn">
+                <i class="fa-solid fa-chevron-down"></i></button>
+        </div>
+    </div>
+    <div class="container" id="about">
+        <div class="sub-container">
+
+            <div class="wrapper">
+                 <div>
+                    <h2>About</h2>
+                </div>
+                <div class="card">
+
+                </div>
+               
+            </div>
+        </div>
+
+    </div>
+    <div class="container">
+    
+    </div>
+    {% include 'footer.html' %}
+    <script src="{% static 'js/index.js' %}"></script>
+
+</body>
+
+</html>

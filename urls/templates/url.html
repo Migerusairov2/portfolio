@@ -1,0 +1,37 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Project Directories</title>
+    <link rel="icon" href="{% static 'img/favicon.ico' %}">
+    <link rel="stylesheet" href="{% static 'css/url.css' %}">
+</head>
+
+<body>
+    {% include 'header.html' %}
+    <div class="container">
+        <div class="wrapper">
+            <h2>Django Projects</h2>
+            <ul class="projects">
+                {% for url in urls %}
+                <li class="card">
+                    <div>
+                        <img src="{% static 'img/logo.png' %}" alt="img">
+                    </div>
+                    <br>
+                    <a href="{{ url }}">{{ url|cut:"/" }}</a>
+                </li>
+                {% empty %}
+                <li class="card">No URLs found</li>
+                {% endfor %}
+            </ul>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
