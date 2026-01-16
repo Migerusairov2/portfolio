@@ -14,6 +14,11 @@ body {
     scroll-behavior: smooth;
 }
 
+img {
+    -webkit-user-drag: none;
+    /* Chrome, Safari */
+    user-select: none;
+}
 
 /* ===== Header Base ===== */
 header {
@@ -21,7 +26,8 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 30px 10%;
-    position: fixed; /* needed for hiding/revealing */
+    position: fixed;
+    /* needed for hiding/revealing */
     top: 0;
     left: 0;
     right: 0;
@@ -67,7 +73,7 @@ header nav ul.navbar {
     gap: 50px;
 }
 
-#connect{
+#connect {
     color: #FCFAF1;
     background-color: #000000;
     padding: 10px;
@@ -102,7 +108,10 @@ footer .logo img {
     object-fit: contain;
 }
 
-@media (max-width: 768px) {
+
+
+
+/* @media (max-width: 768px) {
     header {
         flex-direction: column;
         align-items: center;
@@ -114,14 +123,18 @@ footer .logo img {
         margin-top: 10px;
         align-items: center;
     }
-}
+} */
 
 .container {
     display: flex;
-    flex-direction: column; /* stack children vertically */
-    align-items: center;    /* horizontal centering */
-    justify-content: center; /* vertical centering */
-    min-height: 100vh;      /* full viewport height */
+    flex-direction: column;
+    /* stack children vertically */
+    align-items: center;
+    /* horizontal centering */
+    justify-content: center;
+    /* vertical centering */
+    min-height: 100vh;
+    /* full viewport height */
 }
 
 .container .wrapper {
@@ -159,21 +172,24 @@ footer .logo img {
     color: black;
     height: auto;
     padding: 10px;
-    outline: 1px solid rgba(255, 255, 255, 1);  
-    background-color: #D8D2C2; 
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05); /* x-offset, y-offset, blur, color */
+    outline: 2px solid rgb(0, 0, 0);
+    background-color: #D8D2C2;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    /* x-offset, y-offset, blur, color */
 }
 
-#landing-card{
-    transform: rotate(-20deg);
+#landing-card {
+    transform: rotate(-10deg);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
+    background-color: #FCFAF1;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
 }
 
-#landing-card img{
+#landing-card img {
     width: 300px;
     transform: rotate(-20deg);
 }
@@ -182,10 +198,11 @@ footer .logo img {
 
 #scrollBtn {
     position: absolute;
-    bottom: 15px;        /* distance from bottom */
+    bottom: 15px;
+    /* distance from bottom */
     left: 50%;
     transform: translateX(-50%);
-    
+
     border: none;
     color: #000000;
     padding: 10px;
@@ -205,9 +222,12 @@ footer .logo img {
 }
 
 @keyframes bounce {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translateY(0);
     }
+
     50% {
         transform: translateY(7px);
     }
@@ -216,10 +236,10 @@ footer .logo img {
 #about {
     background-color: #D8D2C2;
     box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.12),
-                inset 0 -2px 6px rgba(255, 255, 255, 0.4);
+        inset 0 -2px 6px rgba(255, 255, 255, 0.4);
 }
 
-#about .wrapper .card{  
+#about .wrapper .card {
     background-color: #FAF7F0;
     height: 600px;
     width: 1200px;
@@ -228,12 +248,32 @@ footer .logo img {
     transform: rotate(3deg);
 }
 
-.sub-container{
+.sub-container {
     display: flex;
-    
+
 }
 
-.sub-container div h2{
+.sub-container div h2 {
     text-align: right;
     max-width: unset !important;
+}
+
+
+div.polaroid {
+    
+    width: 30%;
+    background-color: #ffff;
+}
+
+
+
+div.polaroid img {
+    width: 200px;
+    height: 300px;
+}
+
+#description {
+    width: 68%;
+    flex-wrap: wrap;    
+    text-align: justify
 }

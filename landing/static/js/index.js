@@ -1,3 +1,4 @@
+
 document.addEventListener("DOMContentLoaded", function () {
     const button = document.getElementById("scrollBtn");
     const target = document.getElementById("about");
