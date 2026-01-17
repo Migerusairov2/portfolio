@@ -5,7 +5,7 @@
 <head>
     <title>Miguel</title>
     <link rel="icon" href="{% static 'img/favicon.ico' %}">
-    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <link rel="stylesheet" href="{% static 'css/a.css' %}">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -13,43 +13,61 @@
 <body>
     {% include 'header.html' %}
     <div class="container">
-        <div class="wrapper">
-            <div class="card">
-            </div>
-            <div>
-                <h2>The Future of building happens together.</h2>
-                <h3>Together, we build what’s next.</h3>
-            </div>
-            <div class="card" id="landing-card" style="background-color: FAF7F0;">
+        <div class="sub-container">
+            <div class="wrapper">
+                <div class="card" style="height: 250px;"></div>
+                <div class="text-content fade-left">
+                    <h2>The Future of building happens together.</h2>
+                    <h3>Together, we build what’s next.</h3>
+                </div>
                 <div class="card" id="landing-card">
                     <div class="card" id="landing-card">
-                        <img src="{% static 'img/logo.png' %}" alt="img">
+                        <div class="card" id="landing-card">
+                            <img src="{% static 'img/logo.png' %}" alt="Logo">
+                        </div>
                     </div>
-
                 </div>
             </div>
         </div>
+
         <div>
             <button type="button" id="scrollBtn">
-                <i class="fa-solid fa-chevron-down"></i></button>
+                <i class="fa-solid fa-chevron-down"></i>
+            </button>
         </div>
     </div>
+    </div>
     <div class="container" id="about">
-        <div class="sub-container">
 
+        <div class="sub-container">
+            <div class="title">
+                <h2>About</h2>
+            </div>
             <div class="wrapper">
-                <div>
-                    <h2>About</h2>
-                </div>
-                <div class="card">
+                <div class="card" style="background-color: white;">
                     <div class="card">
-                        <div class="wrapper">
+                        <div class="wrapper" id="about-wrapper">
                             <div class="polaroid">
-                                TDSA
+                                <img src="{% static 'img/profile.jpg' %}" alt="Profile">
+                                <div class="caption" id="name">
+                                    <h4>Miguel Angel C. Silos</h2>
+                                </div>
+                                <div class="caption" id="position"><i>Developer</i></div>
                             </div>
-                            <div id="description">
-                                I dedicated to delivering reliable, high-quality solutions that help individuals and businesses achieve their goals. My focus is on clarity, efficiency, and continuous improvement. By combining experience with modern technology, I aim to create results that are both practical and impactful.
+                            <div class="description">
+                                <div id="description">
+                                    I dedicated to delivering reliable, high-quality solutions that help individuals and
+                                    businesses achieve their goals. My focus is on clarity, efficiency, and continuous
+                                    improvement. By combining experience with modern technology, I aim to create results
+                                    that are both practical and impactful.
+                                </div>
+                                <div class="arrow-right">
+                                    <i>see more </i>
+                                    <a href="#"><i class="fa-solid fa-chevron-right"></i></button>
+                                    </a>
+                                </div>
                             </div>
+
                         </div>
                     </div>
 
@@ -60,8 +78,93 @@
 
     </div>
     <div class="container">
+        <div class="sub-container">
+            <div class="title">
+                <h2>
+                    Porject Features
+                </h2>
+            </div>
+
+            <ul class="project-list">
+                <li>
+                    <div class="wrap animate pop">
+                        <div class="overlay">
+                            <div class="overlay-content animate slide-left delay-2">
+                                <h1 class="animate slide-left pop delay-4" id="project_id"
+                                    style="font-family: 'Great Vibes', cursive;">Project</h1>
+                            </div>
+                            <div class="image-content animate slide delay-5"></div>
+                        </div>
+                        <div class="text">
+                            <p><img class="inset" src="{% static 'img/profile.jpg' %}" alt="" />Trees are
+                                woody perennial plants that are a member of the kingdom <em>Plantae</em>. All species of
+                                trees are grouped by their genus, family, and order. This helps make identifying and
+                                studying trees easier.</p>
+                            <p>Apart from providing oxygen for the planet and beauty when they bloom or turn color,
+                                trees are very useful. Certain species of hardwood and softwood trees are excellent for
+                                timber, making furniture, and paper.</p>
+                            <p>When managed properly, trees are a good source of renewable energy and construction
+                                material.</p>
+                            <img class="tree" src="{% static 'img/profile.jpg' %}" alt="" />
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="wrap animate pop">
+                        <div class="overlay">
+                            <div class="overlay-content animate slide-left delay-2">
+                                <h1 class="animate slide-left pop delay-4" id="project_id"
+                                    style="font-family: 'Great Vibes', cursive;">Project</h1>
+                            </div>
+                            <div class="image-content animate slide delay-5"></div>
+                        </div>
+                        <div class="text">
+                            <p><img class="inset" src="{% static 'img/profile.jpg' %}" alt="" />Trees are
+                                woody perennial plants that are a member of the kingdom <em>Plantae</em>. All species of
+                                trees are grouped by their genus, family, and order. This helps make identifying and
+                                studying trees easier.</p>
+                            <p>Apart from providing oxygen for the planet and beauty when they bloom or turn color,
+                                trees are very useful. Certain species of hardwood and softwood trees are excellent for
+                                timber, making furniture, and paper.</p>
+                            <p>When managed properly, trees are a good source of renewable energy and construction
+                                material.</p>
+                            <img class="tree" src="{% static 'img/profile.jpg' %}" alt="" />
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
 
     </div>
+    <div class="container">
+        <div class="spacer">
+            <div class="title">
+                <h2>
+                    Framework & Language used.
+                </h2>
+            </div>
+            <div class="logo">
+                <div class="marquee">
+                    <div class="marquee-content">
+                        <span>1</span>
+                        <span>2</span>
+                        <span>3</span>
+                        <span>4</span>
+                        <span>5</span>
+
+                        <!-- duplicate for seamless loop -->
+                        <span>1</span>
+                        <span>2</span>
+                        <span>3</span>
+                        <span>4</span>
+                        <span>5</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
     {% include 'footer.html' %}
     <script src="{% static 'js/index.js' %}"></script>
 
