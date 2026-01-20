@@ -7,31 +7,40 @@
     <meta charset="UTF-8">
     <title>Project Directories</title>
     <link rel="icon" href="{% static 'img/favicon.ico' %}">
-    <link rel="stylesheet" href="{% static 'css/url.css' %}">
+    <link rel="stylesheet" href="{% static 'css/x.css' %}">
 </head>
 
 <body>
     {% include 'header.html' %}
-    <div class="container">
-        <div class="wrapper">
-            <h2>Django Projects</h2>
-            <ul class="projects">
-                {% for url in urls %}
-                <li class="card">
-                    <div>
-                        <img src="{% static 'img/logo.png' %}" alt="img">
-                    </div>
-                    <br>
-                    <a href="{{ url }}">{{ url|cut:"/" }}</a>
-                </li>
-                {% empty %}
-                <li class="card">No URLs found</li>
-                {% endfor %}
-            </ul>
-        </div>
 
+    <div class="container">
+        <div class="sub-container">
+            <div class="title" style="margin-top: 200px;">
+                <h2>Django</h2>
+            </div>
+            <div class="wrapper">
+                <div class="projects">
+                    {% if urls %}
+                        {% for url in urls %}
+                            <div class="polaroid">
+                                <img src="{% static 'img/profile.jpg' %}" alt="Profile">
+                                <div class="caption">
+                                    <a href="{{ url }}">{{ url|cut:"/" }}</a>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    {% else %}
+                        <div class="caption">
+                            No URLs found
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
     </div>
 
+    {% include 'footer.html' %}
+    <script src="{% static 'js/index.js' %}"></script>
 </body>
 
 </html>

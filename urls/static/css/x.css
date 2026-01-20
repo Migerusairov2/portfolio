@@ -1,0 +1,185 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: block;
+    margin: 0;
+    font-family: "Inter", Arial, sans-serif;
+    /* background: radial-gradient(circle at right, #132440 0%, #000 100%); */
+    overflow-y: auto;
+    scroll-behavior: smooth;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.sub-container {
+    display: flex;
+    flex-direction: column;
+    width: 1300px;
+    min-height: 100vh;
+    
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0 auto;
+    width: 100%;
+    margin-left: 20px;
+}
+
+.card{
+    background-color: #FCFAF1;
+}
+
+.title {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.title h2 {
+    font-family: 'Great Vibes', cursive;
+    font-size: clamp(2rem, 4vw, 4rem);
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    margin-bottom: 20px;
+}
+
+
+/* ===== Header Base ===== */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+    position: fixed;
+    /* needed for hiding/revealing */
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #FCFAF1;
+    z-index: 1000;
+
+    /* Slide-down on page load */
+    transform: translateY(-120%);
+    animation: slideDown 0.8s forwards;
+
+    /* Smooth transitions for padding and hiding */
+    transition: padding 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Slide-down animation */
+@keyframes slideDown {
+    to {
+        transform: translateY(0);
+    }
+}
+
+/* ===== Logo ===== */
+header .logo img {
+    width: 200px;
+    height: 100px;
+    object-fit: contain;
+    transition: width 0.3s ease, height 0.3s ease;
+}
+
+/* ===== Shrink on scroll ===== */
+header.scrolled {
+    padding: 10px 10%;
+}
+
+header.scrolled .logo img {
+    width: 120px;
+    height: 60px;
+}
+
+header nav ul.navbar {
+    list-style: none;
+    display: flex;
+    gap: 50px;
+}
+
+#connect {
+    color: #FCFAF1;
+    background-color: #000000;
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+/* ===== Navigation Links (optional) ===== */
+header nav ul.navbar li a {
+    text-decoration: none;
+    margin-left: 20px;
+    color: #333;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.5s ease;
+}
+
+header nav ul.navbar li a:hover {
+    border-bottom: 2px solid #44444E;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    padding: 30px 10%;
+    background-color: #FAF7F0;
+    color: #44444E;
+}
+
+footer .logo img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+.projects {
+    display: flex;
+    flex-wrap: wrap;      /* allow multiple rows */
+    gap: 20px;            /* spacing between polaroids */
+    justify-content: center; /* center the items horizontally */
+}
+
+.polaroid {
+    background-color: #fff;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    text-align: center;
+    width: 300px;          
+}
+
+.polaroid img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.caption {
+    margin-top: 8px;
+    font-size: 14px;
+    word-break: break-word;
+}
+
+
+
+
+img {
+    -webkit-user-drag: none;
+    user-select: none;
+}
+
+a{
+    text-decoration: none;
+}

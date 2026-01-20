@@ -15,7 +15,6 @@ body {
 
 img {
     -webkit-user-drag: none;
-    /* Chrome, Safari */
     user-select: none;
 }
 
@@ -80,7 +79,6 @@ header nav ul.navbar {
     font-weight: 600;
 }
 
-/* ===== Navigation Links (optional) ===== */
 header nav ul.navbar li a {
     text-decoration: none;
     margin-left: 20px;
@@ -88,6 +86,8 @@ header nav ul.navbar li a {
     border-bottom: 2px solid transparent;
     transition: border-bottom 0.5s ease;
 }
+
+
 
 header nav ul.navbar li a:hover {
     border-bottom: 2px solid #44444E;
@@ -155,6 +155,7 @@ footer .logo img {
 }
 
 .text-content h2 {
+    /* font-family: 'Great Vibes', cursive; */
     font-size: clamp(2rem, 4vw, 4rem);
     font-weight: 700;
     line-height: 1.2;
@@ -163,11 +164,14 @@ footer .logo img {
 }
 
 .text-content h3 {
+    font-family: 'Great Vibes', cursive;
     font-size: clamp(1.5rem, 2.5vw, 1.5rem);
     font-weight: 300;
     line-height: 1.2;
     letter-spacing: 0.04em;
 }
+
+
 
 .card#landing-card {
     display: flex;
@@ -576,7 +580,7 @@ ul.project-list {
 
 ul.project-list li {
     background-color: #FAF7F0;
-    padding: 20px;
+    padding: 10px;
     border-radius: 10px;
 }
 
@@ -584,23 +588,38 @@ ul.project-list li {
     height: auto;
     display: flex;
     justify-content: center;
-    width: 1500px;
+    width: 100%;
     flex-direction: column;
 
 }
 
-.marquee {
+.logo-marquee {
+  width: 100%;
   overflow: hidden;
-  white-space: nowrap;
-  background-color: red;
+  background: #f9f9f9;
+  padding: 20px 0;
 }
 
-.marquee-content {
-  display: inline-flex;
-  gap: 20px;
-  animation: scroll 10s linear infinite;
+.logo-track {
+  display: flex;
+  width: max-content;
+  gap: 50px;
+  animation: scroll 60s linear infinite;
 }
 
+.logo-track img {
+  height: 60px;
+  width: auto;
+  filter: grayscale(100%);
+  transition: 0.3s;
+}
+
+.logo-track img:hover {
+  filter: grayscale(0%);
+  transform: scale(1.1);
+}
+
+/* Infinite animation */
 @keyframes scroll {
   from {
     transform: translateX(0);
@@ -608,4 +627,9 @@ ul.project-list li {
   to {
     transform: translateX(-50%);
   }
+}
+
+.logo-marquee {
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
 }
