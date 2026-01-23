@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+
 let lastScroll = 0;
 const header = document.querySelector('header');
 const scrollBtn = document.getElementById('scrollBtn');

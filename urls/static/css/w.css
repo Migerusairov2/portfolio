@@ -7,7 +7,6 @@
 
 body {
     display: block;
-    margin: 0;
     font-family: "Inter", Arial, sans-serif;
     /* background: radial-gradient(circle at right, #132440 0%, #000 100%); */
     overflow-y: auto;
@@ -172,8 +171,6 @@ footer .logo img {
 }
 
 
-
-
 img {
     -webkit-user-drag: none;
     user-select: none;
@@ -181,4 +178,13 @@ img {
 
 a{
     text-decoration: none;
+}
+
+.spacer {
+    height: auto;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    flex-direction: column;
+
 }

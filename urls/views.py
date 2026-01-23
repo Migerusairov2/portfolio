@@ -22,4 +22,5 @@ def urls_dir(request):
 
     sorted_urls = sorted(filtered_urls)
     context = {'urls': sorted_urls}
+    
     return render(request, 'url.html', context)

@@ -5,7 +5,7 @@
 <head>
     <title>Miguel</title>
     <link rel="icon" href="{% static 'img/favicon.ico' %}">
-    <link rel="stylesheet" href="{% static 'css/d.css' %}">
+    <link rel="stylesheet" href="{% static 'css/g.css' %}">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -17,15 +17,18 @@
             <div class="wrapper">
                 <div class="text-content fade-left">
                     <h2>The Future of building happens together.</h2>
-                    <h3>Together, we build what’s next.</h3>
+                    <h3>Together, <span>we build</span> <span id="fadeText"></span>.</h3>
                 </div>
-                <div class="card" id="landing-card">
+                <div class="card-bounce">
                     <div class="card" id="landing-card">
                         <div class="card" id="landing-card">
-                            <img src="{% static 'img/logo.png' %}" alt="Logo">
+                            <div class="card" id="landing-card">
+                                <img src="{% static 'img/logo.png' %}" alt="Logo">
+                            </div>
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
 
@@ -38,9 +41,9 @@
     <div class="container" id="about">
 
         <div class="sub-container">
-            <div class="title">
+            <!-- <div class="title">
                 <h2>About</h2>
-            </div>
+            </div> -->
             <div class="wrapper">
                 <div class="card">
                     <div class="card">
@@ -54,10 +57,37 @@
                             </div>
                             <div class="description">
                                 <div id="description">
-                                    I dedicated to delivering reliable, high-quality solutions that help individuals and
-                                    businesses achieve their goals. My focus is on clarity, efficiency, and continuous
-                                    improvement. By combining experience with modern technology, I aim to create results
-                                    that are both practical and impactful.
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris congue cursus magna,
+                                    non feugiat orci varius sed. Integer volutpat nulla vel feugiat lacinia.
+                                    Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis
+                                    egestas. Morbi magna dolor, rutrum at bibendum eu, ultrices sed arcu. Etiam id
+                                    hendrerit turpis. Nam ut purus nec diam imperdiet ultricies. Praesent nec metus ac
+                                    risus ultricies molestie. Aliquam bibendum ex ac turpis euismod fermentum.
+
+                                    Fusce interdum accumsan molestie. Maecenas gravida metus tortor. Proin ultricies
+                                    varius efficitur. Aliquam dolor libero, tempor non sapien sit amet, lacinia aliquet
+                                    tellus. Nunc convallis purus turpis. Sed vel tempor velit, vel dictum arcu. Integer
+                                    ut posuere libero. Aliquam eget orci lacus. Pellentesque ut leo ut mi tincidunt
+                                    tristique.
+
+                                    Morbi tincidunt feugiat rutrum. Nullam auctor at sapien ut hendrerit. Proin
+                                    elementum sollicitudin sapien nec rhoncus. Aenean convallis nibh diam, mattis
+                                    pretium libero ultrices ac. Donec non mattis dui, vitae elementum massa. Praesent
+                                    faucibus odio quis ipsum tincidunt, id convallis risus scelerisque. Curabitur
+                                    tincidunt massa non nunc viverra lacinia. Mauris ac enim blandit, dictum justo
+                                    vitae, dignissim odio.
+
+                                    Sed ut magna mi. Fusce nec neque vel elit venenatis luctus nec vitae purus. Nullam
+                                    euismod purus eu nibh viverra euismod. Duis commodo ut quam non iaculis. Maecenas
+                                    aliquam nisl orci, eget facilisis felis imperdiet convallis. Suspendisse et ornare
+                                    sapien. Mauris iaculis turpis ac dui imperdiet sagittis. Aliquam hendrerit sem
+                                    tellus, a convallis eros commodo sagittis.
+
+                                    Proin in efficitur urna. Aenean placerat nulla sed tellus sollicitudin vehicula.
+                                    Fusce lacinia fringilla vehicula. Morbi pretium lectus a enim gravida, nec tempor
+                                    lorem efficitur. Vivamus lorem urna, dignissim at euismod ut, tincidunt quis lectus.
+                                    Mauris pellentesque, sem in scelerisque porttitor, nisi est congue nulla, sed
+                                    tristique tellus urna a sem. Quisque sagittis sollicitudin enim nec viverra.
                                 </div>
                                 <div class="arrow-right">
                                     <i>see more </i>
@@ -76,110 +106,50 @@
     </div>
 
     <div class="container">
-        <div class="sub-container">
-            <div class="title">
+        <div class="projects">
+            <div class="title" style="text-align: center;">
                 <h2>
-                    Porject Features
+                    Projects
                 </h2>
             </div>
-
-            <ul class="project-list">
-                <li>
-                    <div class="wrap animate pop">
-                        <div class="overlay">
-                            <div class="overlay-content animate slide-left delay-2">
-                                <h1 class="animate slide-left pop delay-4" id="project_id"
-                                    style="font-family: 'Great Vibes', cursive;">Project</h1>
-                            </div>
-                            <div class="image-content animate slide delay-5"></div>
-                        </div>
-                        <div class="text">
-                            <p><img class="inset" src="{% static 'img/profile.jpg' %}" alt="" />Trees are
-                                woody perennial plants that are a member of the kingdom <em>Plantae</em>. All species of
-                                trees are grouped by their genus, family, and order. This helps make identifying and
-                                studying trees easier.</p>
-                            <p>Apart from providing oxygen for the planet and beauty when they bloom or turn color,
-                                trees are very useful. Certain species of hardwood and softwood trees are excellent for
-                                timber, making furniture, and paper.</p>
-                            <p>When managed properly, trees are a good source of renewable energy and construction
-                                material.</p>
-                            <img class="tree" src="{% static 'img/profile.jpg' %}" alt="" />
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="wrap animate pop">
-                        <div class="overlay">
-                            <div class="overlay-content animate slide-left delay-2">
-                                <h1 class="animate slide-left pop delay-4" id="project_id"
-                                    style="font-family: 'Great Vibes', cursive;">Project</h1>
-                            </div>
-                            <div class="image-content animate slide delay-5"></div>
-                        </div>
-                        <div class="text">
-                            <p><img class="inset" src="{% static 'img/profile.jpg' %}" alt="" />Trees are
-                                woody perennial plants that are a member of the kingdom <em>Plantae</em>. All species of
-                                trees are grouped by their genus, family, and order. This helps make identifying and
-                                studying trees easier.</p>
-                            <p>Apart from providing oxygen for the planet and beauty when they bloom or turn color,
-                                trees are very useful. Certain species of hardwood and softwood trees are excellent for
-                                timber, making furniture, and paper.</p>
-                            <p>When managed properly, trees are a good source of renewable energy and construction
-                                material.</p>
-                            <img class="tree" src="{% static 'img/profile.jpg' %}" alt="" />
-                        </div>
-                    </div>
-                </li>
-            </ul>
+            {% if urls %}
+            {% for url in urls %}
+            <div class="wrapper">
+                <img src="{% static 'img/profile.jpg' %}" alt="Profile">
+                <div class="caption">
+                    <a href="{{ url }}">{{ url|cut:"/" }}</a>
+                    <br>
+                    <span id="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris congue cursus
+                        magna, non feugiat orci varius sed. Integer volutpat nulla vel feugiat lacinia. Pellentesque
+                        habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Morbi magna
+                        dolor, rutrum at bibendum eu, ultrices sed arcu. Etiam id hendrerit turpis. Nam ut purus nec
+                        diam imperdiet ultricies. Praesent nec metus ac risus ultricies molestie. Aliquam bibendum ex ac
+                        turpis euismod fermentum.</span>
+                </div>
+            </div>
+          
+            {% endfor %}
+            {% else %}
+            <div class="caption">
+                No URLs found
+            </div>
+            {% endif %}
         </div>
+    </div>
 
     </div>
-        <div class="spacer">
+    <div class="spacer">
         <div class="logo-marquee">
-            <div class="logo-track"> 
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" alt="Django">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
-                    alt="JavaScript">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
-                    alt="Postgre">
-
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" alt="Django">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
-                    alt="JavaScript">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
-                    alt="Postgre">
-
-
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" alt="Django">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
-                    alt="JavaScript">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
-                    alt="Postgre">
-
-
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" alt="Django">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
-                    alt="JavaScript">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
-                    alt="Postgre">
+            <div class="logo-track" id="logo-track">
+                <!-- logos will be injected here -->
             </div>
         </div>
     </div>
 
     {% include 'footer.html' %}
-    <script src="{% static 'js/index.js' %}"></script>
+    <script src="{% static 'js/fade.js' %}"></script>
+    <script src="{% static 'js/on-scroll.js' %}"></script>
+    <script src="{% static 'js/tech-stack.js' %}"></script>
 
 </body>
 
