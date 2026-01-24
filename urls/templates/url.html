@@ -7,26 +7,35 @@
     <meta charset="UTF-8">
     <title>Project Directories</title>
     <link rel="icon" href="{% static 'img/favicon.ico' %}">
-    <link rel="stylesheet" href="{% static 'css/w.css' %}">
+    <link rel="stylesheet" href="{% static 'css/s.css' %}">
 </head>
 
 <body>
     {% include 'header.html' %}
 
-    <div class="container">
+    <div class="container" style="padding:200px">
         <div class="sub-container">
-            <div class="title" style="margin-top: 200px;">
+            <div class="title">
                 <h2>Internal Projects</h2>
+                <div class="caption">
+                    <span>This project is developed using the Django framework, focusing on clean architecture,
+                        scalability,
+                        and secure web application practices.</span>
+                </div>
+
             </div>
             <div class="wrapper">
                 <div class="projects">
                     {% if urls %}
                     {% for url in urls %}
                     <div class="polaroid">
-                        <img src="{% static 'img/profile.jpg' %}" alt="Profile">
-                        <div class="caption">
-                            <a href="{{ url }}">{{ url|cut:"/" }}</a>
-                        </div>
+                        <a href="{{ url }}">
+                            <img src="{% static 'img/profile.jpg' %}" alt="Profile">
+                            <div class="caption">
+                                <span>{{ url|cut:"/" }}</span>
+                            </div>
+                        </a>
+
                     </div>
                     {% endfor %}
                     {% else %}
@@ -37,13 +46,13 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="container">
-        <div class="spacer" style="background-color: red;">TEST</div>
-
         <div class="sub-container">
-            <div class="title" style="margin-top: 200px;">
+            <div class="title">
                 <h2>External Projects</h2>
+                <div class="caption">
+                    <span>These projects are built using various frameworks including Django, Flask, React, and others,
+                        showcasing versatility in both frontend and backend web development.</span>
+                </div>
             </div>
             <div class="wrapper">
                 <div class="projects">
@@ -67,7 +76,10 @@
     </div>
 
     {% include 'footer.html' %}
-    <script src="{% static 'js/index.js' %}"></script>
+    <script src="{% static 'js/fade.js' %}"></script>
+    <script src="{% static 'js/on-scroll.js' %}"></script>
+    <script src="{% static 'js/u.js' %}"></script>
+
 </body>
 
 </html>

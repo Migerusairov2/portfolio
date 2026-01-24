@@ -18,7 +18,9 @@ def urls_dir(request):
 
     all_urls = list_urls(resolver.url_patterns)
 
-    filtered_urls = [u for u in all_urls if not u.startswith('/admin/') and u != '/' and u != '/urls/' ]
+    exclude = ['/', '/urls/', '/about/']
+
+    filtered_urls = [u for u in all_urls if not u.startswith('/admin/') and u not in exclude ]
 
     sorted_urls = sorted(filtered_urls)
     context = {'urls': sorted_urls}

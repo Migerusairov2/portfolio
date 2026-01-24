@@ -7,7 +7,6 @@
 
 body {
     display: block;
-    margin: 0;
     font-family: "Inter", Arial, sans-serif;
     /* background: radial-gradient(circle at right, #132440 0%, #000 100%); */
     overflow-y: auto;
@@ -25,7 +24,7 @@ body {
     display: flex;
     flex-direction: column;
     width: 1300px;
-    
+    margin-bottom: 50px;
 }
 
 .wrapper {
@@ -37,8 +36,14 @@ body {
     margin-left: 20px;
 }
 
-.card{
+
+.card {
     background-color: #FCFAF1;
+}
+
+a {
+    font-family: 'Great Vibes', cursive;
+    text-decoration: none;
 }
 
 .title {
@@ -49,7 +54,7 @@ body {
 
 .title h2 {
     font-family: 'Great Vibes', cursive;
-    font-size: clamp(2rem, 4vw, 2rem);
+    font-size: clamp(2rem, 4vw, 1rem);
     font-weight: 700;
     letter-spacing: 0.04em;
     margin-bottom: 20px;
@@ -146,23 +151,29 @@ footer .logo img {
 
 .projects {
     display: flex;
-    flex-wrap: wrap;      /* allow multiple rows */
-    gap: 20px;            /* spacing between polaroids */
-    justify-content: center; /* center the items horizontally */
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
 }
 
 .polaroid {
-    background-color: #fff;
+    background-color: #FAF7F0;
     padding: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     text-align: center;
-    width: 300px;          
+    width: 200px;
+    border-radius: 10px;
+    margin: 30px;
 }
 
-.polaroid img {
-    width: 100%;
-    height: auto;
-    border-radius: 4px;
+.title h2,
+.polaroid, 
+.caption span {
+    opacity: 0;
+    transform: translateY(10px) scale(0.98);
+    transition:
+        opacity 0.6s ease,
+        transform 0.6s ease,
+        filter 0.6s ease,
 }
 
 .caption {
@@ -172,6 +183,30 @@ footer .logo img {
 }
 
 
+.title h2.show,
+.polaroid.show,
+.caption span.show {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.polaroid.show:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+
+.polaroid img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.polaroid a {
+    color: #000;
+    font-weight: 700px;
+}
 
 
 img {
@@ -179,6 +214,12 @@ img {
     user-select: none;
 }
 
-a{
-    text-decoration: none;
+
+.spacer {
+    height: auto;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    flex-direction: column;
+
 }

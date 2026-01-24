@@ -5,7 +5,10 @@
 <head>
     <title>Miguel</title>
     <link rel="icon" href="{% static 'img/favicon.ico' %}">
-    <link rel="stylesheet" href="{% static 'css/g.css' %}">
+    <link rel="stylesheet" href="{% static 'css/j.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -56,7 +59,7 @@
                                 <div class="caption" id="position"><i>Developer</i></div>
                             </div>
                             <div class="description">
-                                <div id="description">
+                                <div id="about-description">
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris congue cursus magna,
                                     non feugiat orci varius sed. Integer volutpat nulla vel feugiat lacinia.
                                     Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis
@@ -90,8 +93,7 @@
                                     tristique tellus urna a sem. Quisque sagittis sollicitudin enim nec viverra.
                                 </div>
                                 <div class="arrow-right">
-                                    <i>see more </i>
-                                    <a href="#"><i class="fa-solid fa-chevron-right"></i></button>
+                                    <a href="{% url 'about' %}"><i>more info</i><i class="fa-solid fa-chevron-right"></i></button>
                                     </a>
                                 </div>
                             </div>
@@ -109,9 +111,11 @@
         <div class="projects">
             <div class="title" style="text-align: center;">
                 <h2>
-                    Projects
+                    Recent Projects
                 </h2>
             </div>
+
+
             {% if urls %}
             {% for url in urls %}
             <div class="wrapper">
@@ -119,7 +123,7 @@
                 <div class="caption">
                     <a href="{{ url }}">{{ url|cut:"/" }}</a>
                     <br>
-                    <span id="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris congue cursus
+                    <span id="project-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris congue cursus
                         magna, non feugiat orci varius sed. Integer volutpat nulla vel feugiat lacinia. Pellentesque
                         habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Morbi magna
                         dolor, rutrum at bibendum eu, ultrices sed arcu. Etiam id hendrerit turpis. Nam ut purus nec
@@ -127,13 +131,17 @@
                         turpis euismod fermentum.</span>
                 </div>
             </div>
-          
             {% endfor %}
             {% else %}
             <div class="caption">
                 No URLs found
             </div>
             {% endif %}
+            <div class="spacer"
+                style="width: 900px; display: flex; align-items: flex-end;font-family: 'Great Vibes', cursive; margin-bottom: 20px; animation: bounce-right 1.5s infinite;">
+                <a href="{% url 'urls_dir' %}" class="{% if request.path == '/urls/' %}active{% endif %}">other
+                    projects<i class="fa-solid fa-chevron-right"></i></a>
+            </div>
         </div>
     </div>
 
@@ -150,6 +158,8 @@
     <script src="{% static 'js/fade.js' %}"></script>
     <script src="{% static 'js/on-scroll.js' %}"></script>
     <script src="{% static 'js/tech-stack.js' %}"></script>
+        <script src="{% static 'js/fade-on-scroll.js' %}"></script>
+
 
 </body>
 
